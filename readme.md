@@ -35,14 +35,47 @@ inside of that we have a **package.json** file
 ```
 after that we create a js file in the terminal by **touch index.js** we open that and console log
 ```js
-console.log("Hello world!");
+console.log("Levin!");
 ```
 
 to check if that console log is working at our text editor terminal we type in 
 ```js
-☁  my-first-node-proj  node index.js
+☁  node_modules_practice  node index.js
 ```
 and it logs the string beneath it
 ```js
-hello world!
+Levin!
+```
+
+Create a res.js file and inside of that file is my array of foods.
+```js
+const  faveFood = ["Adobo", "Lumpia", "Lechon", "Pancit", "Sinigang"];
+
+```
+module exports is a js object that contains all code we want to export for import in other files (like entry point index.js).
+```js
+module.exports = faveFood;
+```
+
+In my index.js in order for me to use the array that was pass in the res.js file I need to pass in the node keyword require allows us to import modules
+```js
+const faveFoods = require("./res.js");
+```
+
+write code in your index.js so when you run your app, it loops through the array, printing all of your favorite foods to the console
+```js 
+for (let i = 0; i < faveFoods.length; i++) {
+    console.log(faveFoods[i])
+}
+```
+
+This is the [npm](https://www.npmjs.com/) that I have.
+```js
+const oneLinerJoke = require('one-liner-joke');
+const getRandomJoke = oneLinerJoke.getRandomJoke();
+console.log(getRandomJoke);
+{
+  body: "The easiest job in the world has to be coroner. Surgery on dead people. What's the worst thing that could happen? If everything went wrong, maybe you'd get a pulse.",
+  tags: [ 'life' ]
+}
 ```

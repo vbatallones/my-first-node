@@ -42,4 +42,7 @@ const moment = require("moment");
 
 // console.log(today)
 
-console.log(moment('11-20-1994').format("dddd [the] Do [of] MMMM [in the year] YYYY"))
+// console.log(moment('11-20-1994').format("dddd [the] Do [of] MMMM [in the year] YYYY"))
+const chalk = require('chalk');
+
+console.log(chalk.red('Hello world!'))
